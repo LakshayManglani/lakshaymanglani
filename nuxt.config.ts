@@ -9,4 +9,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  appConfig: {
+    ui: {
+      colors: {
+        neutral: 'neutral',
+      },
+    },
+  },
 });

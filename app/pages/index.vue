@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import Hero from '~/components/home/Hero.vue';
+</script>
+
 <template>
-  <UContainer>
-    <h1 class="text-center text-4xl text-primary mt-4">Lakshay Manglani</h1>
-  </UContainer>
+  <div>
+    <Hero />
+  </div>
 </template>
