@@ -16,23 +16,23 @@ Currently focusing on **freelance projects** — from setting up production serv
 ### 💼 Freelance Projects
 
 - 🥘 **Food Ordering Website** – Built menu display.  
-  ![Food Website - Home Page](./public/readme/tahir-sultan-food-home.png)  
-  ![Food Website - Menu Page](./public/readme/tahir-sultan-food-menu.png)
+  ![Food Website - Home Page](./public/readme/tahir-sultan-food-home.jpg)  
+  ![Food Website - Menu Page](./public/readme/tahir-sultan-food-menu.jpg)
 
 - 🪑 **Antiques & Furniture Store** – Developed a site for showing products.  
-  ![Furniture Store - Home Page](./public/readme/tahir-sultan-home.png)  
-  ![Furniture Store - Catalogue Page](./public/readme/tahir-sultan-catalouge.png)
+  ![Furniture Store - Home Page](./public/readme/tahir-sultan-home.jpg)  
+  ![Furniture Store - Catalogue Page](./public/readme/tahir-sultan-catalouge.jpg)
 
 A scalable, opinionated Fastify + TypeScript server template with modern tooling (ESLint, Prettier, Vitest, Pino, Docker, CI/CD, API docs, and more).
 
 - ⚡ **Reusable Server Template** – A scalable, opinionated server template with modern tooling (ESLint, Prettier, Vitest, Pino, Docker, CI/CD, API docs, and more).  
   _(Private project, feature-rich)_  
-  ![Server Template - Docs](./public/readme/server_template_docs_2.png)  
-  ![Server Template - API Docs](./public/readme/server_template_api_docs_1.png)
+  ![Server Template - Docs](./public/readme/server_template_docs_2.jpg)  
+  ![Server Template - API Docs](./public/readme/server_template_api_docs_1.jpg)
 
 - 📝 **Custom Rich Text Editor** – Integrated into client websites to make content management effortless.
-  ![Kathika - Editor Showcase](./public/readme/kathika-home-edit-showcase.png)  
-  ![Kathika - Admin Dashboard](./public/readme/kathika_admin_dashboard.png)
+  ![Kathika - Editor Showcase](./public/readme/kathika-home-edit-showcase.jpg)  
+  ![Kathika - Admin Dashboard](./public/readme/kathika_admin_dashboard.jpg)
 
 ---
 
@@ -41,22 +41,22 @@ A scalable, opinionated Fastify + TypeScript server template with modern tooling
 Beyond development, I also work on **UI/UX design in Figma** — creating reusable components, dashboards, and product flows for clients.
 
 - **Kathika Editor & Admin**  
-  ![Figma - Kathika Component Review](./public/readme/kathika-figma-component-review.png)  
-  ![Figma - Kathika Development View](./public/readme/kathika-figma-development.png)  
-  ![Figma - Kathika Review Flow](./public/readme/kathika-figma-review.png)
+  ![Figma - Kathika Component Review](./public/readme/kathika-figma-component-review.jpg)  
+  ![Figma - Kathika Development View](./public/readme/kathika-figma-development.jpg)  
+  ![Figma - Kathika Review Flow](./public/readme/kathika-figma-review.jpg)
 
 - **Reusable Code Components**  
-  ![Figma - Code Components](./public/readme/code-figma-components.png)  
-  ![Figma - Developer Handoff](./public/readme/code-figma.png)
+  ![Figma - Code Components](./public/readme/code-figma-components.jpg)  
+  ![Figma - Developer Handoff](./public/readme/code-figma.jpg)
 
 - **Makaan Jaipur Project**  
-  ![Figma - Custom Components](./public/readme/makaan-jaipur-figma-custom-components.png)  
-  ![Figma - Product Review Flow](./public/readme/makaan-jaipur-figma-product-review.png)  
-  ![Figma - Research Notes](./public/readme/makaan-jaipur-figma-research.png)  
-  ![Figma - Review Dashboard](./public/readme/makaan-jaipur-figma-review.png)
+  ![Figma - Custom Components](./public/readme/makaan-jaipur-figma-custom-components.jpg)  
+  ![Figma - Product Review Flow](./public/readme/makaan-jaipur-figma-product-review.jpg)  
+  ![Figma - Research Notes](./public/readme/makaan-jaipur-figma-research.jpg)  
+  ![Figma - Review Dashboard](./public/readme/makaan-jaipur-figma-review.jpg)
 
 - **Tahir Sultan Website**  
-  ![Figma - Website Design](./public/readme/tahir-sultan-figma.png)
+  ![Figma - Website Design](./public/readme/tahir-sultan-figma.jpg)
 
 ---
 
