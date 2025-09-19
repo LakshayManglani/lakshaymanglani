@@ -1,75 +1,79 @@
-# Nuxt Minimal Starter
+# 👋 Hi, I'm Lakshay Manglani
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+🚀 **Fullstack JavaScript Developer** passionate about building scalable backends and dynamic frontends.  
+Currently focusing on **freelance projects** — from setting up production servers to crafting smooth user experiences.
 
-## Setup
+---
 
-Make sure to install dependencies:
+### 🛠️ Tech Stack
 
-```bash
-# npm
-npm install
+- **Frontend:** React, Vue, Nuxt, Tailwind, Redux
+- **Backend:** Node.js, Express, Fastify, REST APIs
+- **Databases & Infra:** PostgreSQL, MongoDB, Redis, Kafka, Docker, Nginx, Linux
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+### 💼 Freelance Projects
 
-# bun
-bun install
-```
+- 🥘 **Food Ordering Website** – Built menu display.  
+  ![Food Website - Home Page](./public/readme/tahir-sultan-food-home.png)  
+  ![Food Website - Menu Page](./public/readme/tahir-sultan-food-menu.png)
 
-## Development Server
+- 🪑 **Antiques & Furniture Store** – Developed a site for showing products.  
+  ![Furniture Store - Home Page](./public/readme/tahir-sultan-home.png)  
+  ![Furniture Store - Catalogue Page](./public/readme/tahir-sultan-catalouge.png)
 
-Start the development server on `http://localhost:3000`:
+A scalable, opinionated Fastify + TypeScript server template with modern tooling (ESLint, Prettier, Vitest, Pino, Docker, CI/CD, API docs, and more).
 
-```bash
-# npm
-npm run dev
+- ⚡ **Reusable Server Template** – A scalable, opinionated server template with modern tooling (ESLint, Prettier, Vitest, Pino, Docker, CI/CD, API docs, and more).  
+  _(Private project, feature-rich)_  
+  ![Server Template - Docs](./public/readme/server_template_docs_2.png)  
+  ![Server Template - API Docs](./public/readme/server_template_api_docs_1.png)
 
-# pnpm
-pnpm dev
+- 📝 **Custom Rich Text Editor** – Integrated into client websites to make content management effortless.
+  ![Kathika - Editor Showcase](./public/readme/kathika-home-edit-showcase.png)  
+  ![Kathika - Admin Dashboard](./public/readme/kathika_admin_dashboard.png)
 
-# yarn
-yarn dev
+---
 
-# bun
-bun run dev
-```
+### 🎨 Figma Design Work
 
-## Production
+Beyond development, I also work on **UI/UX design in Figma** — creating reusable components, dashboards, and product flows for clients.
 
-Build the application for production:
+- **Kathika Editor & Admin**  
+  ![Figma - Kathika Component Review](./public/readme/kathika-figma-component-review.png)  
+  ![Figma - Kathika Development View](./public/readme/kathika-figma-development.png)  
+  ![Figma - Kathika Review Flow](./public/readme/kathika-figma-review.png)
 
-```bash
-# npm
-npm run build
+- **Reusable Code Components**  
+  ![Figma - Code Components](./public/readme/code-figma-components.png)  
+  ![Figma - Developer Handoff](./public/readme/code-figma.png)
 
-# pnpm
-pnpm build
+- **Makaan Jaipur Project**  
+  ![Figma - Custom Components](./public/readme/makaan-jaipur-figma-custom-components.png)  
+  ![Figma - Product Review Flow](./public/readme/makaan-jaipur-figma-product-review.png)  
+  ![Figma - Research Notes](./public/readme/makaan-jaipur-figma-research.png)  
+  ![Figma - Review Dashboard](./public/readme/makaan-jaipur-figma-review.png)
 
-# yarn
-yarn build
+- **Tahir Sultan Website**  
+  ![Figma - Website Design](./public/readme/tahir-sultan-figma.png)
 
-# bun
-bun run build
-```
+---
 
-Locally preview production build:
+### 🏆 Highlights
 
-```bash
-# npm
-npm run preview
+- Cut API response times by ~50% with Redis caching & query optimization.
+- Reduced client infrastructure costs by deploying on optimized bare-metal servers.
+- Awarded _2nd Prize_ for project **CodeWeb** at Maharishi Arvind Institute.
 
-# pnpm
-pnpm preview
+---
 
-# yarn
-yarn preview
+### 📬 Let’s Connect
 
-# bun
-bun run preview
-```
+📧 [lakshaymanglani2212@gmail.com](mailto:lakshaymanglani2212@gmail.com)  
+🌐 [Portfolio Website](#) (Coming Soon)  
+🐙 [GitHub](https://github.com/LakshayManglani)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+⭐️ _Always open for freelance opportunities — feel free to reach out!_
