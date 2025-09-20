@@ -5,5 +5,6 @@ import Hero from '~/components/home/Hero.vue';
 <template>
   <div>
     <Hero />
+    <div class="h-96" />
   </div>
 </template>
