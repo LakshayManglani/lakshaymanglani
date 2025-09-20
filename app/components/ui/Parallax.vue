@@ -8,10 +8,10 @@ const parallax = reactive(useParallax(target));
 </script>
 
 <template>
-  <div ref="target" class="flex flex-col justify-center duration-300 ease-out h-full">
+  <div ref="target" class="w-full flex flex-col justify-center duration-300 ease-out h-full">
     <div class="perspective-near mx-auto">
       <div
-        class="size-96 border rounded-full ease-out duration-300 overflow-hidden"
+        class="size-48 sm:size-56 lg:size-96 border rounded-full ease-out duration-300 overflow-hidden"
         :style="{
           transform: `rotateX(${parallax.roll * 20}deg) rotateY(${parallax.tilt * 20}deg)`,
         }"
