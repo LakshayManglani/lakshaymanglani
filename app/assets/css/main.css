@@ -5,3 +5,7 @@
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
+
+html {
+  scroll-behavior: smooth;
+}
