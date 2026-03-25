@@ -1,10 +1,25 @@
 <script setup lang="ts">
-import PageBackground from '~/components/PageBackground.vue';
+import AppHeader from '~/components/AppHeader.vue';
+import AppBackground from '~/components/AppBackground.vue';
 </script>
 
 <template>
-  <div>
-    <PageBackground />
-    <slot />
+  <div class="relative isolate max-w-dvw max-h-dvh h-dvh w-dvw overflow-hidden">
+    <AppBackground />
+    <div class="absolute inset-0 overflow-y-auto scroll-smooth">
+      <slot />
+    </div>
+    <AppHeader
+      :links="[
+        {
+          label: 'Home',
+          to: '/',
+        },
+        {
+          label: 'Projects',
+          to: '/projects',
+        },
+      ]"
+    />
   </div>
 </template>
