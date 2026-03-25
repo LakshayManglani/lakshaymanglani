@@ -21,5 +21,6 @@ import AppBackground from '~/components/AppBackground.vue';
         },
       ]"
     />
+    <AppNavbar />
   </div>
 </template>
