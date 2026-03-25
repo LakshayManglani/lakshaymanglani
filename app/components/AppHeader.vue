@@ -10,11 +10,11 @@ defineProps<{
   <div class="absolute px-4 top-0 h-min w-full flex p-4 justify-center">
     <div class="relative rounded-full max-w-3xl w-full">
       <div class="absolute inset-0 rounded-full">
-        <div class="absolute rounded-full inset-0 backdrop-blur-md overflow-hidden"/>
+        <div class="absolute rounded-full inset-0 backdrop-blur-md overflow-hidden" />
         <div
           class="absolute rounded-full inset-0 bg-shade-2 opacity-30 m-px drop-shadow-white dark:drop-shadow-black drop-shadow-lg"
         />
-        <div class="absolute rounded-full inset-0 blend-border mix-blend-overlay"/>
+        <div class="absolute rounded-full inset-0 blend-border mix-blend-overlay" />
       </div>
 
       <div class="relative flex justify-center">
@@ -39,7 +39,7 @@ defineProps<{
               <UButton
                 color="neutral"
                 variant="ghost"
-                to="https://github.com/nuxt/ui"
+                to="https://github.com/LakshayManglani"
                 target="_blank"
                 icon="i-simple-icons-github"
                 aria-label="GitHub"
