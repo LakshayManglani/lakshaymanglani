@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
     },
   },
+
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/ui', '@pinia/nuxt', '@vueuse/nuxt'],
@@ -20,4 +21,8 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   css: ['~/assets/css/main.css'],
+
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
 });
