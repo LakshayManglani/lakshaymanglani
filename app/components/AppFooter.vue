@@ -3,25 +3,18 @@ import type { NavigationMenuItem } from '@nuxt/ui';
 
 const items: NavigationMenuItem[] = [
   {
-    label: 'Figma Kit',
-    to: 'https://go.nuxt.com/figma-ui',
-    target: '_blank',
+    label: 'Home',
+    to: '/',
   },
   {
-    label: 'Playground',
-    to: 'https://stackblitz.com/edit/nuxt-ui',
-    target: '_blank',
-  },
-  {
-    label: 'Releases',
-    to: 'https://github.com/nuxt/ui/releases',
-    target: '_blank',
+    label: 'Projects',
+    to: '/projects',
   },
 ];
 </script>
 
 <template>
-  <div class="mb-15 md:mb-0 pb-16">
+  <div class="mb-15 md:mb-0 pb-16 text-shadow-md/100 text-shadow-white dark:text-shadow-black">
     <UFooter>
       <template #top>
         <UContainer>
