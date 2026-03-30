@@ -8,7 +8,9 @@ import AppBackground from '~/components/AppBackground.vue';
     <AppBackground />
     <div class="absolute inset-0 overflow-y-auto scroll-smooth">
       <slot />
+      <AppFooter />
     </div>
+
     <AppHeader
       :links="[
         {
