@@ -7,8 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="absolute px-4 top-0 h-min w-full flex p-4 justify-center">
-    <div class="relative rounded-full max-w-3xl w-full">
+  <div class="absolute px-4 top-0 h-min w-full flex p-4 justify-center pointer-events-none">
+    <div class="relative rounded-full max-w-3xl w-full pointer-events-auto">
       <div class="absolute inset-0 rounded-full">
         <div class="absolute rounded-full inset-0 backdrop-blur-md overflow-hidden" />
         <div
