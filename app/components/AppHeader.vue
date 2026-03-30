@@ -26,6 +26,7 @@ defineProps<{
           <UNavigationMenu
             :items="links"
             class="gap-2 py-4 px-8"
+            variant="link"
             :ui="{
               link: 'px-2 py-1',
               linkLeadingIcon: 'hidden',

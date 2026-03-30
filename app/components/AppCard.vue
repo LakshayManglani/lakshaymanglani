@@ -1,3 +1,9 @@
+<script setup lang="ts">
+defineProps<{
+  transparent?: boolean;
+}>();
+</script>
+
 <template>
   <div class="relative w-fit">
     <div class="absolute inset-0 rounded-[inherit]">
@@ -5,6 +11,9 @@
 
       <div
         class="absolute rounded-[inherit] inset-0 m-px bg-shade-2 drop-shadow-white dark:drop-shadow-black drop-shadow-[0_-2px_8px]"
+        :class="{
+          'opacity-25': transparent,
+        }"
       />
 
       <!-- <div class="absolute rounded-[inherit] inset-0 opacity-50 bg-shade-2 m-px" /> -->
@@ -12,7 +21,7 @@
       <div class="absolute rounded-[inherit] inset-0 blend-border mix-blend-overlay" />
     </div>
 
-    <div class="relative">
+    <div class="relative w-full h-full">
       <slot />
     </div>
 

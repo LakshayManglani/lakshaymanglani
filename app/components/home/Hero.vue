@@ -79,7 +79,7 @@ const libs = [
         production-ready web apps.
       </div>
 
-      <AppCard class="rounded-full mx-auto mt-16">
+      <AppCard class="rounded-full mx-auto mt-16" transparent>
         <ul class="flex gap-4 px-8 py-4">
           <li v-for="(item, index) in libs" :key="index">
             <div class="relative">
