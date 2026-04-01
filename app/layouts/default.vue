@@ -7,7 +7,9 @@ import AppBackground from '~/components/AppBackground.vue';
   <div class="relative isolate max-w-dvw max-h-dvh h-dvh w-dvw overflow-hidden">
     <AppBackground />
     <div class="absolute inset-0 overflow-y-auto scroll-smooth">
-      <slot />
+      <UMain>
+        <slot />
+      </UMain>
       <AppFooter />
     </div>
 

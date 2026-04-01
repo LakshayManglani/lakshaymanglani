@@ -6,4 +6,7 @@ export default defineAppConfig({
       neutral: 'neutral',
     },
   },
+  toc: {
+    title: 'Table of Contents',
+  },
 });

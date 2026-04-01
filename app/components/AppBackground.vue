@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { useTemplateRef, onMounted, onUnmounted } from 'vue';
+
+const route = useRoute();
+
+const isRender = computed(() => {
+  return !route.path.includes('/projects');
+});
+
 const { $gsap: gsap } = useNuxtApp();
 const { x, y } = useMouse({
   type: 'page',
@@ -79,12 +86,13 @@ onUnmounted(() => {
   <div class="absolute inset-0 pointer-events-none">
     <div class="absolute inset-0 bg-shade" />
     <div class="absolute inset-0 bg-noise mix-blend-overlay bg-default opacity-20" />
-    <div ref="follower" class="w-8 h-8 opacity-0">
+    <div v-show="isRender" ref="follower" class="w-8 h-8 opacity-0">
       <div class="absolute inset-0 rounded-full bg-primary blur-xl" />
       <div class="absolute inset-0 bg-primary rounded-full blur-xs" />
     </div>
 
     <div
+      v-show="isRender"
       class="absolute inset-0 bg-grid"
       :style="{
         maskImage: `radial-gradient(circle 128px at ${x}px ${y}px, black, transparent)`,

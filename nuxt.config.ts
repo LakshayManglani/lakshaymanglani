@@ -13,12 +13,17 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@pinia/nuxt', '@vueuse/nuxt'],
+
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@pinia/nuxt', '@vueuse/nuxt', '@nuxt/content'],
+
   eslint: {
     // options here
   },
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [],
+    },
   },
   css: ['~/assets/css/main.css'],
 

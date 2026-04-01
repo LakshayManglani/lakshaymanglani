@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content';
 import type { NavigationMenuItem } from '@nuxt/ui';
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -25,15 +28,28 @@ const items = computed<NavigationMenuItem[]>(() => [
       </div>
 
       <div class="relative flex justify-center">
-        <UNavigationMenu
-          :items="items"
-          class="gap-2 py-2 px-8"
+        <UHeader
+          class="bg-transparent border-none backdrop-blur-none w-full"
+          mode="drawer"
           :ui="{
-            link: 'px-2 py-1',
-            linkLeadingIcon: 'hidden',
+            title: 'hidden',
+            center: 'flex',
           }"
-          variant="link"
-        />
+        >
+          <UNavigationMenu
+            :items="items"
+            class="gap-2 py-2 px-8"
+            :ui="{
+              link: 'px-2 py-1',
+              linkLeadingIcon: 'hidden',
+            }"
+            variant="link"
+          />
+
+          <template #body>
+            <UContentNavigation highlight :navigation="navigation" />
+          </template>
+        </UHeader>
       </div>
     </div>
   </div>
