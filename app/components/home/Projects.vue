@@ -28,7 +28,7 @@ const links = ref<ButtonProps[]>([
   },
   {
     label: 'View Case Study',
-    to: '/projects/gifzi',
+    to: '/projects/client/gifzi',
     color: 'neutral',
     variant: 'subtle',
     trailingIcon: 'i-lucide-arrow-right',
