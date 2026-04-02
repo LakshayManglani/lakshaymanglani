@@ -30,10 +30,13 @@ provide('navigation', navigation);
 
 .layout-enter-active,
 .layout-leave-active {
-  transition: all 0.4s;
+  transition: all 0.1s ease-in-out;
 }
+
 .layout-enter-from,
 .layout-leave-to {
-  filter: blur(0.5rem);
+  opacity: 0;
+  transform: translateY(60px);
+  scale: 0.9;
 }
 </style>
