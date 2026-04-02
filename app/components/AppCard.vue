@@ -21,7 +21,7 @@ defineProps<{
       <div class="absolute rounded-[inherit] inset-0 blend-border mix-blend-overlay" />
     </div>
 
-    <div class="relative w-full h-full">
+    <div class="relative w-full">
       <slot />
     </div>
 
@@ -33,5 +33,7 @@ defineProps<{
         <slot name="description" />
       </p>
     </div>
+
+    <slot name="custom" />
   </div>
 </template>

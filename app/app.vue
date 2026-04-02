@@ -34,7 +34,6 @@ provide('navigation', navigation);
 }
 .layout-enter-from,
 .layout-leave-to {
-  filter: blur(1rem);
-  scale: 0.8;
+  filter: blur(0.5rem);
 }
 </style>
