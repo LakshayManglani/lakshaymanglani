@@ -47,78 +47,58 @@ const cards = ref([
 
 <template>
   <UPageGrid class="lg:grid-cols-2">
-    <AppCard
-      v-for="(card, index) in cards"
-      :key="index"
-      class="rounded-md overflow-hidden"
-      transparent
-    >
+    <div v-for="(card, index) in cards" :key="index" class="rounded-lg overflow-hidden">
       <NuxtLink :to="card.to">
-        <img src="/gifzi/gifzi-2.png" class="aspect-video object-cover" >
+        <img src="/gifzi/gifzi-2.png" class="aspect-video object-cover rounded-sm" >
       </NuxtLink>
 
-      <template #custom>
-        <div class="relative p-4 space-y-4">
-          <div class="space-y-2">
-            <AppCard transparent class="rounded-full overflow-hidden">
-              <template #custom>
-                <div class="relative py-1.5 px-2.5">
-                  <div class="flex items-center justify-center">
-                    <span class="text-muted text-xs"
-                      >{{ card.type === 'client' ? 'Client Work' : 'Personal Work' }} -
-                      {{ card.role }}</span
-                    >
-                  </div>
-                </div>
-              </template>
-            </AppCard>
-
-            <div>
-              <p class="text-xl text-highlighted font-bold">{{ card.title }}</p>
-              <p class="text-muted">
-                {{ card.description }}
-              </p>
-            </div>
-
-            <div class="flex gap-2">
-              <AppCard
-                v-for="(item, index) in card.keywords"
-                :key="index"
-                transparent
-                class="rounded-full overflow-hidden"
-              >
-                <template #custom>
-                  <div class="relative py-1.5 px-2.5">
-                    <div class="flex items-center justify-center">
-                      <span class="text-muted text-xs">{{ item }}</span>
-                    </div>
-                  </div>
-                </template>
-              </AppCard>
-            </div>
+      <div class="relative p-4 space-y-4">
+        <div class="space-y-2">
+          <UBadge
+            :label="`${card.type === 'client' ? 'Client Work' : 'Personal Work'} - ${card.role}`"
+            variant="outline"
+            color="neutral"
+            class="rounded-full"
+          />
+          <div>
+            <p class="text-xl text-highlighted font-bold">{{ card.title }}</p>
+            <p class="text-muted">
+              {{ card.description }}
+            </p>
           </div>
 
-          <UButton
-            variant="outline"
-            class="w-full p-0 ring-muted rounded-l-md rounded-r-3xl group"
-            :to="card.to"
-          >
-            <template #default>
-              <div class="px-3 py-2 flex gap-2 items-center justify-center">
-                <UIcon :name="card.icon" />
-                <span class="text-highlighted">{{ card.buttonLabel }}</span>
-              </div>
-            </template>
-            <template #trailing>
-              <div
-                class="border rounded-full ml-auto aspect-square h-full p-2 flex justify-center items-center duration-300 bg-white dark:bg-black shadow-[0_0_0px_0px_var(--ui-color-primary-500)] group-hover:shadow-[0_0_8px_4px_var(--ui-color-primary-500)]"
-              >
-                <UIcon name="i-lucide-arrow-right" class="size-5" />
-              </div>
-            </template>
-          </UButton>
+          <div class="flex gap-2">
+            <UBadge
+              v-for="(item, index) in card.keywords"
+              :key="index"
+              :label="item"
+              variant="outline"
+              color="neutral"
+              class="rounded-full bg-transparent text-muted"
+            />
+          </div>
         </div>
-      </template>
-    </AppCard>
+
+        <UButton
+          variant="outline"
+          class="w-full p-0 ring-muted rounded-l-md rounded-r-3xl group"
+          :to="card.to"
+        >
+          <template #default>
+            <div class="px-3 py-2 flex gap-2 items-center justify-center">
+              <UIcon :name="card.icon" />
+              <span class="text-highlighted">{{ card.buttonLabel }}</span>
+            </div>
+          </template>
+          <template #trailing>
+            <div
+              class="border rounded-full ml-auto aspect-square h-full p-2 flex justify-center items-center duration-300 bg-white dark:bg-black shadow-[0_0_0px_0px_var(--ui-color-primary-500)] group-hover:shadow-[0_0_8px_4px_var(--ui-color-primary-500)]"
+            >
+              <UIcon name="i-lucide-arrow-right" class="size-5" />
+            </div>
+          </template>
+        </UButton>
+      </div>
+    </div>
   </UPageGrid>
 </template>

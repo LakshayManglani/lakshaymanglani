@@ -11,9 +11,11 @@ provide('navigation', navigation);
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
 
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <div class="relative overflow-hidden">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
   </UApp>
 </template>
 
@@ -28,15 +30,28 @@ provide('navigation', navigation);
   filter: blur(1rem);
 }
 
-.layout-enter-active,
-.layout-leave-active {
-  transition: all 0.1s ease-in-out;
+.layout-enter-active {
+  transition: all 0.4s cubic-bezier(0.19, 0.675, 0.055, 0.55);
 }
 
-.layout-enter-from,
+.layout-leave-active {
+  transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.layout-enter-from {
+  opacity: 0;
+  transform: translateY(100%) scale(0.95);
+  filter: blur(0.25rem);
+}
+
+.layout-enter-to {
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
 .layout-leave-to {
   opacity: 0;
-  transform: translateY(60px);
-  scale: 0.9;
+  transform: translateY(-100%) scale(1.05);
+  filter: blur(0.25rem);
 }
 </style>
