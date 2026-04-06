@@ -9,6 +9,7 @@ const cards = ref([
     to: '/projects/gifzi',
     keywords: ['Figma', 'UI/UX', 'Design System'],
     buttonLabel: '40+ Screens',
+    banner: '/gifzi/gifzi-mobile-experience.png',
   },
   {
     title: 'Kathika',
@@ -19,6 +20,7 @@ const cards = ref([
     to: '/projects/kathika',
     keywords: ['React', 'Slate', 'Express'],
     buttonLabel: '20+ Components',
+    banner: '/kathika/kathika-editor-preview.png',
   },
   {
     title: 'Dev Sync',
@@ -30,10 +32,12 @@ const cards = ref([
     to: 'projects/dev-sync',
     keywords: ['Node.js', 'Express', 'Kafka', 'MicroServices'],
     buttonLabel: 'Event-Driven System',
+    banner: '/dev-sync/dev-sync-kafka-flow.png',
   },
   {
     title: 'Server Template',
     type: 'personal',
+
     role: 'Backend Infrastructure',
     description:
       'Created a production-ready backend template with opinionated structure and tooling',
@@ -41,6 +45,7 @@ const cards = ref([
     to: 'projects/server-template',
     keywords: ['Fasify', 'TypeScript', 'Docker', 'CI/CD'],
     buttonLabel: 'Scalable & Resuable',
+    banner: '/server-template/server-template-docs.png',
   },
 ]);
 </script>
@@ -50,10 +55,7 @@ const cards = ref([
     <div v-for="(card, index) in cards" :key="index" class="rounded-lg overflow-hidden">
       <NuxtLink :to="card.to">
         <div class="aspect-video w-full rounded-sm overflow-hidden">
-          <img
-            src="/gifzi/gifzi-2.png"
-            class="aspect-video object-cover hover:scale-110 duration-300"
-          >
+          <img :src="card.banner" class="aspect-video object-cover hover:scale-110 duration-300" >
         </div>
       </NuxtLink>
 
