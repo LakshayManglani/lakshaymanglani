@@ -65,7 +65,7 @@ const stackItems: Record<
 
 const loopItems = [];
 
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < 20; i++) {
   for (const item of items) {
     loopItems.push(item);
   }

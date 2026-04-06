@@ -53,33 +53,33 @@ const links = ref<ButtonProps[]>([
   >
     <div class="flex gap-4 flex-col">
       <div class="flex gap-4">
-        <AppCard class="rounded-xl aspect-square flex-[36%] overflow-hidden p-2" transparent>
+        <div class="rounded-xl aspect-square flex-[36%] overflow-hidden">
           <AppImage
             src="/gifzi/gifzi-1.png"
             :ui="{
               image: 'w-full h-full object-cover rounded-lg',
             }"
           />
-        </AppCard>
-        <AppCard class="rounded-xl aspect-video flex-[64%] overflow-hidden p-2" transparent>
+        </div>
+        <div class="rounded-xl aspect-video flex-[64%] overflow-hidden">
           <AppImage
             src="/gifzi/gifzi-2.png"
             :ui="{
               image: 'w-full h-full object-cover rounded-lg',
             }"
           />
-        </AppCard>
+        </div>
       </div>
       <div class="flex gap-4">
-        <AppCard class="rounded-xl aspect-video flex-[64%] overflow-hidden p-2" transparent>
+        <div class="rounded-xl aspect-video flex-[64%] overflow-hidden">
           <AppImage
             src="/gifzi/gifzi-3.png"
             :ui="{
               image: 'w-full h-full object-cover rounded-lg',
             }"
           />
-        </AppCard>
-        <AppCard class="rounded-xl aspect-square flex-[36%] overflow-hidden p-2" transparent>
+        </div>
+        <AppCard class="rounded-xl aspect-square flex-[36%] overflow-hidden" transparent>
           <div class="w-full h-full aspect-square">
             <div class="absolute inset-0 flex items-center justify-center blur-xl flex-col gap-4">
               <AseetsGifziLogo class="size-8 sm:size-16" />
