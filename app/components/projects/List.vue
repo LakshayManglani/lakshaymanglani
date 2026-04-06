@@ -49,7 +49,12 @@ const cards = ref([
   <UPageGrid class="lg:grid-cols-2">
     <div v-for="(card, index) in cards" :key="index" class="rounded-lg overflow-hidden">
       <NuxtLink :to="card.to">
-        <img src="/gifzi/gifzi-2.png" class="aspect-video object-cover rounded-sm" >
+        <div class="aspect-video w-full rounded-sm overflow-hidden">
+          <img
+            src="/gifzi/gifzi-2.png"
+            class="aspect-video object-cover hover:scale-110 duration-300"
+          >
+        </div>
       </NuxtLink>
 
       <div class="relative p-4 space-y-4">
