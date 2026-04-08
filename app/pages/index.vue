@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // defineOgImage('OgImage');
 
-defineOgImage('Card.takumi', {
+defineOgImage('Card', {
   title: 'Lakshay Manglani',
   description: 'Full Stack Developer.',
 });
