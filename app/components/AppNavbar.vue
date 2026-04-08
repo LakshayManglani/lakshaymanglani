@@ -40,7 +40,7 @@ const items = computed<NavigationMenuItem[]>(() => [
             :items="items"
             class="gap-2 py-2 px-8"
             :ui="{
-              link: 'px-2 py-1',
+              link: 'px-2 py-1 text-shadow-md/50 text-shadow-white dark:text-shadow-black',
               linkLeadingIcon: 'hidden',
             }"
             variant="link"

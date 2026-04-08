@@ -8,8 +8,9 @@ const links = ref<ButtonProps[]>([
     trailingIcon: 'i-lucide-external-link',
   },
   {
-    label: 'Download Resume',
-    to: '#',
+    label: 'View Resume',
+    target: '_blank',
+    to: '/lakshay-manglani-resume.pdf',
     color: 'neutral',
     variant: 'outline',
     trailingIcon: 'i-lucide-file-text',

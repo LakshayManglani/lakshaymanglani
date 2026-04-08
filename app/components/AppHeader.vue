@@ -28,7 +28,7 @@ defineProps<{
             class="gap-2 py-4 px-8"
             variant="link"
             :ui="{
-              link: 'px-2 py-1',
+              link: 'px-2 py-1 text-shadow-md/50 text-shadow-white dark:text-shadow-black',
               linkLeadingIcon: 'hidden',
             }"
           />

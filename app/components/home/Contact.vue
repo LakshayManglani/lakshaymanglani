@@ -44,7 +44,7 @@ const socialLinks: {
   >
     <ul class="flex gap-4 md:gap-8 justify-center items-center flex-wrap px-4 mt-8">
       <li v-for="(item, index) in socialLinks" :key="index">
-        <NuxtLink :to="item.to">
+        <NuxtLink :to="item.to" target="_blank">
           <AppCard class="rounded-md">
             <div class="relative px-12 py-12">
               <div class="absolute inset-0 flex items-center justify-center blur-2xl">

@@ -61,7 +61,7 @@ const links = ref<ButtonProps[]>([
             }"
           />
         </div>
-        <div class="rounded-xl aspect-video flex-[64%] overflow-hidden">
+        <div class="relative rounded-xl aspect-video flex-[64%] overflow-hidden">
           <AppImage
             src="/gifzi/gifzi-2.png"
             :ui="{

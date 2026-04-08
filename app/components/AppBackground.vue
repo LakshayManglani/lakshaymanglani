@@ -47,11 +47,6 @@ const hideFollower = () => {
   });
 };
 
-// Watch mouse movement
-watch([x, y], () => {
-  showFollower();
-});
-
 onMounted(() => {
   if (!follower.value) return;
 
@@ -73,6 +68,8 @@ watch([x, y], ([newX, newY]) => {
     setX(newX);
     setY(newY - window.scrollY);
   }
+
+  showFollower();
 });
 
 onUnmounted(() => {

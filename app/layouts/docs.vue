@@ -51,7 +51,7 @@ onMounted(() => {
       el.getBoundingClientRect().top - container.getBoundingClientRect().top + container.scrollTop;
 
     container.scrollTo({
-      top: top - 100,
+      top: top - 130,
       behavior: 'smooth',
     });
   };

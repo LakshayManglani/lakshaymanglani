@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useTemplateRef, onMounted, onUnmounted } from 'vue';
+
 const cards = ref([
   {
     title: 'Gifzi',
@@ -48,14 +50,115 @@ const cards = ref([
     banner: '/server-template/server-template-docs.png',
   },
 ]);
+
+const { $gsap: gsap } = useNuxtApp();
+
+const { x, y } = useMouse({
+  type: 'page',
+});
+
+const follower = useTemplateRef<HTMLElement>('follower');
+
+const followerText = ref('');
+const isVisible = ref(false);
+
+let setX: ReturnType<typeof gsap.quickTo> | null = null;
+let setY: ReturnType<typeof gsap.quickTo> | null = null;
+
+const showFollower = (text: string) => {
+  if (!follower.value) return;
+
+  followerText.value = text;
+
+  if (!isVisible.value) {
+    isVisible.value = true;
+
+    gsap.fromTo(
+      follower.value,
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 0.3,
+        ease: 'power2.out',
+      },
+    );
+  }
+};
+
+// hide tooltip
+const hideFollower = () => {
+  if (!follower.value) return;
+
+  isVisible.value = false;
+
+  gsap.to(follower.value, {
+    opacity: 0,
+    scale: 0.8,
+    duration: 0.25,
+    ease: 'power2.out',
+  });
+};
+
+onMounted(() => {
+  if (!follower.value) return;
+
+  gsap.set(follower.value, {
+    xPercent: -50,
+    yPercent: -50,
+    opacity: 0,
+  });
+
+  setX = gsap.quickTo(follower.value, 'x', {
+    duration: 0.4,
+    ease: 'power3.out',
+  });
+
+  setY = gsap.quickTo(follower.value, 'y', {
+    duration: 0.4,
+    ease: 'power3.out',
+  });
+});
+
+// smooth follow
+watch([x, y], ([newX, newY]) => {
+  if (setX && setY) {
+    setX(newX);
+    setY(newY - window.scrollY - 16);
+  }
+});
+
+onUnmounted(() => {
+  setX = null;
+  setY = null;
+});
 </script>
 
 <template>
+  <div
+    ref="follower"
+    class="fixed top-0 left-0 z-50 pointer-events-none flex items-center gap-1 bg-default text-highlighted shadow-sm rounded-sm ring ring-default h-6 px-2.5 py-1 text-xs select-none"
+  >
+    {{ followerText }}
+    <UIcon name="i-lucide-arrow-right" class="size-4" />
+  </div>
+
   <UPageGrid class="lg:grid-cols-2">
-    <div v-for="(card, index) in cards" :key="index" class="rounded-lg overflow-hidden">
+    <div v-for="(card, index) in cards" :key="index" class="rounded-lg">
       <NuxtLink :to="card.to">
-        <div class="aspect-video w-full rounded-sm overflow-hidden">
-          <img :src="card.banner" class="aspect-video object-cover hover:scale-110 duration-300" >
+        <div
+          class="aspect-video w-full rounded-t-lg rounded-b-sm ring-0 ring-transparent hover:ring-primary hover:ring-4 duration-300 hover:scale-95"
+        >
+          <div
+            class="aspect-video w-full rounded-t-lg rounded-b-sm overflow-hidden isolate"
+            @pointerenter="showFollower('View Case Study')"
+            @pointerleave="hideFollower"
+          >
+            <img
+              :src="card.banner"
+              class="aspect-video object-cover hover:scale-110 duration-300"
+            >
+          </div>
         </div>
       </NuxtLink>
 
