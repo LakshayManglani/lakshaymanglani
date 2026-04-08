@@ -1,3 +1,19 @@
+<script setup lang="ts">
+// defineOgImage('OgImage');
+
+defineOgImage('Card.takumi', {
+  title: 'Lakshay Manglani',
+  description: 'Full Stack Developer.',
+});
+
+useSeoMeta({
+  title: 'Lakshay Manglani',
+  ogTitle: 'Lakshay Manglani',
+  description: 'Full Stack Developer',
+  ogDescription: 'Full Stack Developer',
+});
+</script>
+
 <template>
   <div>
     <HomeHero />

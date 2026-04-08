@@ -36,9 +36,10 @@ useSeoMeta({
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path));
 
-// defineOgImageComponent('Docs', {
-//   headline: headline.value,
-// });
+defineOgImage('Card', {
+  title,
+  description,
+});
 </script>
 
 <template>
