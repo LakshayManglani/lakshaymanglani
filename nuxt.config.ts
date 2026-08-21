@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   eslint: {
