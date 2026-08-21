@@ -14,6 +14,18 @@ const cards = ref([
     banner: '/gifzi/gifzi-mobile-experience.png',
   },
   {
+    title: 'Bicar',
+    type: 'client',
+    role: 'Editor Architecture',
+    description:
+      'Researched block-editor frameworks, then built a custom Notion-style visual editor from scratch',
+    icon: 'i-lucide-pen-tool',
+    to: '/projects/bicar',
+    keywords: ['React', 'Slate', 'TypeScript'],
+    buttonLabel: '6 Custom Blocks',
+    banner: '/bicar/bicar-edit-toggle.png',
+  },
+  {
     title: 'Kathika',
     type: 'client',
     role: 'Full Stack',
