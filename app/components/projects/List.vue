@@ -47,7 +47,7 @@ const cards = ref([
     to: 'projects/server-template',
     keywords: ['Fasify', 'TypeScript', 'Docker', 'CI/CD'],
     buttonLabel: 'Scalable & Resuable',
-    banner: '/server-template/server-template-docs.png',
+    banner: '/server-template/server_docs_home.png',
   },
 ]);
 
@@ -145,37 +145,37 @@ onUnmounted(() => {
 
   <UPageGrid class="lg:grid-cols-2">
     <div v-for="(card, index) in cards" :key="index" class="rounded-lg">
-      <NuxtLink :to="card.to">
-        <div
-          class="aspect-video w-full rounded-t-lg rounded-b-sm ring-0 ring-transparent hover:ring-primary hover:ring-4 duration-300 hover:scale-95"
-        >
-          <div
-            class="aspect-video w-full rounded-t-lg rounded-b-sm overflow-hidden isolate"
-            @pointerenter="showFollower('View Case Study')"
-            @pointerleave="hideFollower"
-          >
-            <img
-              :src="card.banner"
-              class="aspect-video object-cover hover:scale-110 duration-300"
-            >
-          </div>
-        </div>
-      </NuxtLink>
-
       <div class="relative p-4 space-y-4">
         <div class="space-y-2">
+          <p class="text-xl text-highlighted font-bold">{{ card.title }}</p>
+
+          <NuxtLink :to="card.to">
+            <div
+              class="aspect-video w-full rounded-t-lg rounded-b-sm ring-0 ring-transparent hover:ring-primary hover:ring-4 duration-300 hover:scale-95"
+            >
+              <div
+                class="aspect-video w-full rounded-t-lg rounded-b-sm overflow-hidden isolate"
+                @pointerenter="showFollower('View Case Study')"
+                @pointerleave="hideFollower"
+              >
+                <img
+                  :src="card.banner"
+                  class="aspect-video object-cover hover:scale-110 duration-300"
+                >
+              </div>
+            </div>
+          </NuxtLink>
+
           <UBadge
             :label="`${card.type === 'client' ? 'Client Work' : 'Personal Work'} - ${card.role}`"
             variant="outline"
             color="neutral"
             class="rounded-full"
           />
-          <div>
-            <p class="text-xl text-highlighted font-bold">{{ card.title }}</p>
-            <p class="text-muted">
-              {{ card.description }}
-            </p>
-          </div>
+
+          <p class="text-muted">
+            {{ card.description }}
+          </p>
 
           <div class="flex gap-2">
             <UBadge
