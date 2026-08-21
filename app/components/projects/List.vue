@@ -3,15 +3,16 @@ import { useTemplateRef, onMounted, onUnmounted } from 'vue';
 
 const cards = ref([
   {
-    title: 'Gifzi',
-    type: 'client',
-    role: 'Product Design',
-    description: 'Designed a scalable digital gifting experience with 40+ responsive screens.',
-    icon: 'i-lucide-smile',
-    to: '/projects/gifzi',
-    keywords: ['Figma', 'UI/UX', 'Design System'],
-    buttonLabel: '40+ Screens',
-    banner: '/gifzi/gifzi-mobile-experience.png',
+    title: 'Server Template',
+    type: 'personal',
+    role: 'Backend Infrastructure',
+    description:
+      'Created a production-ready backend template with opinionated structure and tooling',
+    icon: 'i-lucide-sun-moon',
+    to: '/projects/server-template',
+    keywords: ['Fastify', 'TypeScript', 'Docker', 'CI/CD'],
+    buttonLabel: 'Scalable & Reusable',
+    banner: '/server-template/server_docs_home.png',
   },
   {
     title: 'Bicar',
@@ -26,6 +27,18 @@ const cards = ref([
     banner: '/bicar/bicar-edit-toggle.png',
   },
   {
+    title: 'Gems',
+    type: 'personal',
+    role: 'Full Stack + Systems',
+    description:
+      "A gemstone e-commerce platform I'm building and self-hosting — a dedicated Rust query service keeps catalog reads fast without hitting the database.",
+    icon: 'i-lucide-gem',
+    to: '/projects/gems',
+    keywords: ['Rust', 'Nuxt', 'Self-Hosted'],
+    buttonLabel: '15k req/s',
+    banner: '/gems/gems_home.png',
+  },
+  {
     title: 'Kathika',
     type: 'client',
     role: 'Full Stack',
@@ -37,29 +50,27 @@ const cards = ref([
     banner: '/kathika/kathika-editor-preview.png',
   },
   {
+    title: 'Gifzi',
+    type: 'client',
+    role: 'Product Design',
+    description: 'Designed a scalable digital gifting experience with 40+ responsive screens.',
+    icon: 'i-lucide-smile',
+    to: '/projects/gifzi',
+    keywords: ['Figma', 'UI/UX', 'Design System'],
+    buttonLabel: '40+ Screens',
+    banner: '/gifzi/gifzi-mobile-experience.png',
+  },
+  {
     title: 'Dev Sync',
     role: 'Microservices Architecture',
     type: 'personal',
     description:
-      'Architected a microservices-based developer platform with event-driven communication',
+      'A paused-but-real microservices platform — event-driven auth, email, and user services over Kafka',
     icon: 'i-lucide-sun-moon',
-    to: 'projects/dev-sync',
+    to: '/projects/dev-sync',
     keywords: ['Node.js', 'Express', 'Kafka', 'MicroServices'],
     buttonLabel: 'Event-Driven System',
     banner: '/dev-sync/dev-sync-kafka-flow.png',
-  },
-  {
-    title: 'Server Template',
-    type: 'personal',
-
-    role: 'Backend Infrastructure',
-    description:
-      'Created a production-ready backend template with opinionated structure and tooling',
-    icon: 'i-lucide-sun-moon',
-    to: 'projects/server-template',
-    keywords: ['Fasify', 'TypeScript', 'Docker', 'CI/CD'],
-    buttonLabel: 'Scalable & Resuable',
-    banner: '/server-template/server_docs_home.png',
   },
 ]);
 
@@ -161,6 +172,13 @@ onUnmounted(() => {
         <div class="space-y-2">
           <p class="text-xl text-highlighted font-bold">{{ card.title }}</p>
 
+          <UBadge
+            :label="`${card.type === 'client' ? 'Client Work' : 'Personal Work'} - ${card.role}`"
+            variant="outline"
+            color="neutral"
+            class="rounded-full"
+          />
+
           <NuxtLink :to="card.to">
             <div
               class="aspect-video w-full rounded-t-lg rounded-b-sm ring-0 ring-transparent hover:ring-primary hover:ring-4 duration-300 hover:scale-95"
@@ -172,18 +190,12 @@ onUnmounted(() => {
               >
                 <img
                   :src="card.banner"
+                  :alt="`${card.title} project banner`"
                   class="aspect-video object-cover hover:scale-110 duration-300"
                 >
               </div>
             </div>
           </NuxtLink>
-
-          <UBadge
-            :label="`${card.type === 'client' ? 'Client Work' : 'Personal Work'} - ${card.role}`"
-            variant="outline"
-            color="neutral"
-            class="rounded-full"
-          />
 
           <p class="text-muted">
             {{ card.description }}
