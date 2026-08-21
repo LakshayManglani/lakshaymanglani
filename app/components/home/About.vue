@@ -4,7 +4,7 @@ import type { PageFeatureProps } from '@nuxt/ui';
 const features = ref<PageFeatureProps[]>([
   {
     title: 'Real-World Experience',
-    description: 'Delivered 8+ client projects solving real business problems',
+    description: 'Delivered client projects solving real business problems, live in production',
     icon: 'i-lucide-briefcase',
   },
   {
@@ -23,7 +23,7 @@ const features = ref<PageFeatureProps[]>([
 <template>
   <UPageSection
     title="About Me"
-    description="Hi, I’m Lakshay — a full-stack developer and UX/UI designer with 1.5+ years of experience. I’ve worked on multiple client projects, including CMS platforms and custom web applications. I specialize in React, Node.js, and MongoDB, with a strong focus on performance, scalability, and user-centric design."
+    description="Hi, I’m Lakshay — a full-stack developer and UX/UI designer. I’ve shipped multiple production client projects, including CMS platforms with live visual editing and custom web applications. I specialize in Vue, Nuxt, and Node.js — with production experience in React as well — and a strong focus on performance, scalability, and user-centric design."
     orientation="horizontal"
     :features="features"
     :ui="{
@@ -32,6 +32,6 @@ const features = ref<PageFeatureProps[]>([
     }"
     class="text-shadow-md/100 text-shadow-white dark:text-shadow-black"
   >
-    <div class="w-full h-full bg-muted"/>
+    <div class="w-full h-full bg-muted" />
   </UPageSection>
 </template>

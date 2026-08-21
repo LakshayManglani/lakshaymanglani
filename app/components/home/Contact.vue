@@ -47,7 +47,10 @@ const socialLinks: {
         <NuxtLink :to="item.to" target="_blank">
           <AppCard class="rounded-md">
             <div class="relative px-12 py-12">
-              <div class="absolute inset-0 flex items-center justify-center blur-2xl">
+              <div
+                aria-hidden="true"
+                class="absolute inset-0 flex items-center justify-center blur-2xl"
+              >
                 <UIcon
                   :name="item.icon"
                   class="size-16"

@@ -16,8 +16,6 @@ defineProps<{
         }"
       />
 
-      <!-- <div class="absolute rounded-[inherit] inset-0 opacity-50 bg-shade-2 m-px" /> -->
-
       <div class="absolute rounded-[inherit] inset-0 blend-border mix-blend-overlay" />
     </div>
 

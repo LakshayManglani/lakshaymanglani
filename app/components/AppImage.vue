@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   src: string;
+  alt: string;
   ui?: {
     image?: string;
     zoomImage?: string;
@@ -9,7 +10,7 @@ defineProps<{
 
 const open = ref(false);
 
-function toogleOpen() {
+function toggleOpen() {
   open.value = !open.value;
 }
 </script>
@@ -24,7 +25,7 @@ function toogleOpen() {
     }"
   >
     <button class="relative w-full h-full cursor-zoom-in">
-      <img :src="src" :class="ui?.image" >
+      <img :src="src" :alt="alt" :class="ui?.image" >
 
       <div
         class="absolute right-1 top-1 w-6 h-6 border-2 border-accented bg-muted rounded-full hover:bg-primary hover:border-transparent duration-300"
@@ -32,8 +33,13 @@ function toogleOpen() {
     </button>
 
     <template #body>
-      <div class="cursor-zoom-out" @click="toogleOpen">
-        <img :src="src" :class="ui?.zoomImage" class="object-contain max-w-[90vw] max-h-[80vh]" >
+      <div class="cursor-zoom-out" @click="toggleOpen">
+        <img
+          :src="src"
+          :alt="alt"
+          :class="ui?.zoomImage"
+          class="object-contain max-w-[90vw] max-h-[80vh]"
+        >
 
         <div
           class="absolute right-1 top-1 w-6 h-6 border-2 border-accented rounded-full hover:bg-primary/20"

@@ -17,9 +17,9 @@ const items = ref<TimelineItem[]>([
     description:
       'Partnering with businesses to transform complex requirements into scalable, performance-first digital products.',
     descriptionList: [
-      'Delivered 8+ client projects across different domains',
-      'Built 2 custom CMS platforms with inline editing + admin panel.',
-      'Designed 40+ high-fidelity screens for a commercial B2B product.',
+      'Delivered client projects across different domains, live in production',
+      'Built 2 custom CMS platforms with inline visual editing + admin panel',
+      'Designed 40+ high-fidelity screens for a commercial B2B product',
     ],
     icon: 'i-lucide-briefcase',
   },
@@ -42,7 +42,7 @@ const items = ref<TimelineItem[]>([
 <template>
   <UPageSection
     title="Work Experience"
-    description="1.5+ years of experience across freelance and internship."
+    description="Freelance and internship experience shipping production systems for real clients."
     orientation="horizontal"
     :links="links"
     :ui="{

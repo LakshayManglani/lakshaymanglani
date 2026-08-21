@@ -19,21 +19,25 @@ const links = ref<ButtonProps[]>([
 
 const libs = [
   {
+    label: 'Nuxt',
+    icon: 'devicon:nuxtjs',
+  },
+  {
+    label: 'Vue',
+    icon: 'devicon:vuejs',
+  },
+  {
     label: 'TypeScript',
     icon: 'devicon:typescript',
   },
   {
-    label: 'React',
-    icon: 'devicon:react',
-  },
-  {
-    label: 'Express',
-    icon: 'devicon:express',
+    label: 'Fastify',
+    icon: 'devicon:fastify',
     invert: true,
   },
   {
-    label: 'Linux',
-    icon: 'devicon:linux',
+    label: 'Docker',
+    icon: 'devicon:docker',
   },
 ];
 </script>
@@ -49,33 +53,11 @@ const libs = [
     }"
   >
     <template #description>
-      <!-- <div class="relative w-fit mx-auto"> -->
-      <!-- Background -->
-      <!--   <div class="absolute rounded-md inset-0 backdrop-blur-2xl m-px" /> -->
-      <!--   <div -->
-      <!--     class="absolute rounded-md inset-0 blend-border mix-blend-overlay" -->
-      <!--     :style="{ -->
-      <!--       '--bb-width': '2px', -->
-      <!--     }" -->
-      <!--   /> -->
-      <!--   <div class="absolute rounded-md inset-0 blend-border mix-blend-overlay" /> -->
-      <!---->
-      <!--   <div class="relative w-fit px-4 py-2 rounded-md m-px text-muted"> -->
-      <!--     Delivered <span class="font-bold text-highlighted">8+ client projects</span> including -->
-      <!--     custom -->
-      <!--     <br /> -->
-      <!--     CMS platforms, admin panels, and -->
-      <!--     <br /> -->
-      <!--     production-ready web apps. -->
-      <!--   </div> -->
-      <!-- </div> -->
-
-      <!-- Background -->
       <div class="relative text-muted text-shadow-md/100 text-shadow-white dark:text-shadow-black">
-        Delivered <span class="font-bold text-highlighted">8+ client projects</span> including
-        custom
+        <span class="font-bold text-highlighted">Open to full-stack roles</span> — Vue/Nuxt on the
+        frontend, backend & systems design at heart.
         <br >
-        CMS platforms, admin panels, and
+        Delivered client work spanning custom CMS platforms, admin panels, and
         <br >
         production-ready web apps.
       </div>
@@ -84,7 +66,10 @@ const libs = [
         <ul class="flex gap-4 px-8 py-4">
           <li v-for="(item, index) in libs" :key="index">
             <div class="relative">
-              <div class="absolute inset-0 flex items-center justify-center blur-md">
+              <div
+                aria-hidden="true"
+                class="absolute inset-0 flex items-center justify-center blur-md"
+              >
                 <UIcon
                   :name="item.icon"
                   class="size-6"
