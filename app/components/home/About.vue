@@ -24,14 +24,11 @@ const features = ref<PageFeatureProps[]>([
   <UPageSection
     title="About Me"
     description="Hi, I’m Lakshay — a full-stack developer and UX/UI designer. I’ve shipped multiple production client projects, including CMS platforms with live visual editing and custom web applications. I specialize in Vue, Nuxt, and Node.js — with production experience in React as well — and a strong focus on performance, scalability, and user-centric design."
-    orientation="horizontal"
     :features="features"
     :ui="{
       root: 'isolation-auto',
       links: 'text-shadow-md/0',
     }"
     class="text-shadow-md/100 text-shadow-white dark:text-shadow-black"
-  >
-    <div class="w-full h-full bg-muted" />
-  </UPageSection>
+  />
 </template>
