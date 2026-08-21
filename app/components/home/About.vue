@@ -9,13 +9,15 @@ const features = ref<PageFeatureProps[]>([
   },
   {
     title: 'End-to-End Development',
-    description: 'From UI/UX design to backend APIs and deployment',
+    description:
+      'From UI/UX design (40+ screens shipped) to backend APIs, built for performance and scale',
     icon: 'i-lucide-workflow',
   },
   {
-    title: 'Design & Performance Focus',
-    description: 'Designed 40+ screens and built scalable applications',
-    icon: 'i-lucide-sparkles',
+    title: 'Self-Hosted Infrastructure',
+    description:
+      'Run production systems on my own bare-metal Linux server — reverse proxy, TLS, and containerized deployments',
+    icon: 'i-lucide-server',
   },
 ]);
 </script>
@@ -23,7 +25,7 @@ const features = ref<PageFeatureProps[]>([
 <template>
   <UPageSection
     title="About Me"
-    description="Hi, I’m Lakshay — a full-stack developer and UX/UI designer. I’ve shipped multiple production client projects, including CMS platforms with live visual editing and custom web applications. I specialize in Vue, Nuxt, and Node.js — with production experience in React as well — and a strong focus on performance, scalability, and user-centric design."
+    description="Hi, I’m Lakshay — a full-stack developer specializing in Vue and Nuxt, with production experience in React, Node.js, and Fastify. I’ve shipped multiple production client projects, including CMS platforms with live visual editing and custom web applications, and I bring a strong UX/UI sensibility to how I design and build them."
     :features="features"
     :ui="{
       root: 'isolation-auto',
